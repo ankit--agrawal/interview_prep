@@ -13,8 +13,6 @@ def recurrsion_step(input_list,lo,hi):
             index = (pseudo/2) - 1
     else:
             index = (hi-lo)/2
-    if index ==0:
-	index = lo
 
     pivot = input_list[index]
     print "pivot = {}".format(pivot)
