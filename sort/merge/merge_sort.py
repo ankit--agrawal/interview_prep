@@ -12,6 +12,7 @@ def MergeSort(input_list):
 	MergeSort(righthalf)
 
 	i=j=k=0
+	#comapre the smallest elements in left and right half and merge it in the main list
 	while i<len(lefthalf) and j<len(righthalf):
 		if lefthalf[i]<righthalf[j]:
 			input_list[k] = lefthalf[i]
@@ -21,6 +22,7 @@ def MergeSort(input_list):
 			j=j+1
 		k=k+1
 	
+	#if leftovers in either of the arrays
 	while i<len(lefthalf):
 		input_list[k] = lefthalf[i]
 		i=i+1

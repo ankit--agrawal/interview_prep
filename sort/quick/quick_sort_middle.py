@@ -17,6 +17,7 @@ def recurrsion_step(input_list,lo,hi):
     pivot = input_list[index]
     #find correct location of pivot
     while done==False:
+	    #checking if the pivot is in the correct location
             while (i<index and input_list[i]<=pivot):
                 i=i+1
             while (j>index and input_list[j]>=pivot):
@@ -24,6 +25,7 @@ def recurrsion_step(input_list,lo,hi):
                 
             if i==index and j==index:
                 done = True
+	    #if not then perform the swaps
             else:
                 if input_list[i] > pivot:
                             temp = input_list[i]
@@ -45,6 +47,7 @@ def recurrsion_step(input_list,lo,hi):
 
 def partition_input(input_list, low, high):
     if low < high:
+	#returning the pivot and recursively running on the left and right partitions
         y = recurrsion_step(input_list,low,high)
         partition_input(input_list,low,y-1)
         partition_input(input_list,y+1,high)

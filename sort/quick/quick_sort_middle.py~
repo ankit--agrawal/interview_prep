@@ -55,7 +55,7 @@ n = raw_input("Enter the number of elements = ")
 n = int(n)
 input_list = []
 for i in range(0,n):
-	element = raw_input("Enter the values = ")
+	element = raw_input("Enter the value at location {} = ".format(i))
 	element = int(element)
 	input_list.append(element)
 
