@@ -1,4 +1,4 @@
-'''The quicksort algorithm implementation when the pivot 
+'''The quicksort algorithm implementation when the pivot
 		is the middle element'''
 def recurrsion_step(input_list,lo,hi):
     #picking a pivot
@@ -22,7 +22,7 @@ def recurrsion_step(input_list,lo,hi):
                 i=i+1
             while (j>index and input_list[j]>=pivot):
                 j=j-1
-                
+            #the pivot is in the correct location and the array is sorted
             if i==index and j==index:
                 done = True
 	    #if not then perform the swaps
