@@ -6,4 +6,4 @@ Ex:
 
 Output: 1 2 3 6 9 8 7 4 5
 
-Time complexity: O(n^2)
+Time complexity: O(n*m) where n is the number of rows and m is the number of columns
