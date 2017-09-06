@@ -22,7 +22,7 @@ def recurrsion_step(input_list,lo,hi):
                 i=i+1
             while (j>index and input_list[j]>=pivot):
                 j=j-1
-            #the pivot is in the correct location and the array is sorted
+            #the pivot is in the correct location
             if i==index and j==index:
                 done = True
 	    #if not then perform the swaps
