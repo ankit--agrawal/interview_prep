@@ -1,0 +1,52 @@
+#merge sort algorithm: splitting and merging step
+def MergeSort(input_list):
+	if len(input_list)>1:	
+		#print "splitting"
+		mid = len(input_list)//2
+		lefthalf = input_list[:mid]
+		righthalf = input_list[mid:]
+	else:
+		return input_list
+	
+	MergeSort(lefthalf)
+	MergeSort(righthalf)
+
+	i=j=k=0
+	#comapre the smallest elements in left and right half and merge it in the main list
+	while i<len(lefthalf) and j<len(righthalf):
+		if lefthalf[i]<righthalf[j]:
+			input_list[k] = lefthalf[i]
+			i=i+1
+		else:
+			input_list[k] = righthalf[j]
+			j=j+1
+		k=k+1
+	
+	#if leftovers in either of the arrays
+	while i<len(lefthalf):
+		input_list[k] = lefthalf[i]
+		i=i+1
+		k=k+1
+	while j<len(righthalf):
+		input_list[k] = righthalf[j]
+		j=j+1
+		k=k+1
+
+	#print "merging"
+	return input_list
+
+
+
+#------------------main-----------------------------------------------
+n = int(input("How many elements do you want in the array? = "))
+
+if n<1:
+	print 0
+else:
+	inp = []
+	for i in range(0,n):
+	    val = int(input("Enter the value at location {} = ".format(i)))
+	    inp.append(val)
+
+	final = MergeSort(inp)
+	print final
