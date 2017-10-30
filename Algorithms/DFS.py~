@@ -1,7 +1,7 @@
 
 
 def dfs_iterative(graph,start):
-    stack = [start]; path = []
+    stack = [start], path = []
     while stack: #stack not empty
         vertex = stack.pop()
         if vertex in path:
